@@ -11,7 +11,12 @@ function toHTML(data) {
 	$.each( data, function( key, val ) {
 		var start = new Date(val["start"]);
 		var day = weekdays[start.getDay()] + ", " + start.getDate() + "." + (start.getMonth() + 1) + "." + start.getFullYear();
-		var time = start.getHours() + ":" + pad(start.getMinutes(),2);
+		var time = "";
+		if (val["allDay"]) {
+			time = "ganztags";
+		} else {
+			time = start.getHours() + ":" + pad(start.getMinutes(),2);
+		}
 		if (day != prev_day) {
 			items.push("<h3>" + day + "</h3>");
 			prev_day = day;

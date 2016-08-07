@@ -16,11 +16,13 @@ div{
 }
 
 .time {
+	display: block;
 	float:left;
 	color: #2222aa;
 	font-style: italic;
 }
 
 .title {
-	margin-left: 40px;
+	display: block;
+	margin-left: 110px;
 }
