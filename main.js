@@ -43,7 +43,7 @@ function filterForCurrentEvents(data) {
 	return event_start >= today;
 }
 
-$.getJSON( "http://munichmakes.tiefpunkt.com/data/mumalab.json", function( data ) {
+$.getJSON( "https://munichmakes.tiefpunkt.com/data/mumalab.json", function( data ) {
 	data = data.filter(filterForCurrentEvents);
 	data = sortByKey(data, "start");
 	console.log(data);
